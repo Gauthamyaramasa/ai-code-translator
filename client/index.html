@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Translator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Code Translator</h1>
+        <div class="api-input">
+            <input type="password" id="apiKey" placeholder="Enter Groq API" oninput="hideAPIKey()">
+            <button id="toggleApiKeyVisibility" onclick="toggleAPIKeyVisibility()">👁️</button>
+        </div>
+        <div class="buttons">
+            <select id="modelSelect">
+                <option value="llama3-8b-8192">LLaMA-3-8B</option>
+                <option value="llama3-70b-8192">LLaMA-3-70B</option>
+                <option value="mixtral-8x7b-32768">Mixtral-8x7B</option>
+                <option value="gemma-7b-it">Gemma-7B</option>
+                <option value="gemma2-9b-it">Gemma-2-9B</option>
+            </select>
+            <button id="translateButton">Translate</button>
+        </div>
+        <div class="code-container">
+            <div class="code-box">
+                <div class="dropdown">
+                    <select id="inputLanguage">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="c">C</option>
+                        <option value="c++">C++</option>
+                        <option value="php">PHP</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                    </select>
+                </div>
+                <textarea id="inputCode" placeholder="Enter code here..."></textarea>
+            </div>
+            <div class="code-box">
+                <div class="dropdown">
+                    <select id="outputLanguage">
+                        <option value="java">Java</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="c">C</option>
+                        <option value="c++">C++</option>
+                        <option value="php">PHP</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                    </select>
+                </div>
+                <textarea id="outputCode" placeholder="Translated code will appear here..." readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

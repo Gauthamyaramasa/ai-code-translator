@@ -1,0 +1,12 @@
+flask 
+opencv-python 
+pytesseract 
+numpy 
+torch 
+groq
+crewai[tools]
+langchain-groq 
+crewai 
+requests 
+pillow
+flask-cors
